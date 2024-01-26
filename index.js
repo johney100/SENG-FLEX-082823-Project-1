@@ -18,13 +18,13 @@
     </p>
     </div>
     <div class="buttons">
-    <button id="${show.id}"> Upvote </button> 
+    <button id="${show.id}"> Favorite </button> 
     </div>
     `
     document.querySelector('#show-list').appendChild(card);
     const upvoteButton = document.getElementById(`${show.id}`);
     upvoteButton.addEventListener('click', colorElement);
-    
+    upvoteButton.addEventListener('dblclick', removeColor);
   }
 
   // fetch data from api
@@ -46,11 +46,15 @@
   intialize();
   
 
- 
 
   function colorElement(event) {
   const element = event.target;
   element.style.color = 'yellow';
+}
+
+  function removeColor(event){
+  const element = event.target;
+  element.style.color = 'black';
 }
 
   const emailForm = document.getElementById('#form');
