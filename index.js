@@ -63,5 +63,5 @@
   function formSubmit(event) {
     event.preventDefault(); // Prevent default form submission
     const form = event.target; // Get the form element that triggered the event
- 
+    alert("thanks for singing up");
   }
